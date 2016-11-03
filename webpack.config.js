@@ -22,7 +22,7 @@
       },
       {
          test:/\.css$/,
-         loader:'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}'
+         loader:'style-loader!css-loader!autoprefixer?{browsers:["last 2 version"]}'
       },
       {
          test:/\.(png|jpg|woff|woff2)$/,
