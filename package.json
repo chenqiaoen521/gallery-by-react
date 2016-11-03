@@ -1,0 +1,34 @@
+{
+  "name": "gallery",
+  "version": "1.0.0",
+  "description": "gallery",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenqiaoen521/gallery-by-react.git"
+  },
+  "keywords": [
+    "gallery"
+  ],
+  "author": "wuzhe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenqiaoen521/gallery-by-react/issues"
+  },
+  "homepage": "https://github.com/chenqiaoen521/gallery-by-react#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel": "^6.5.2",
+    "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

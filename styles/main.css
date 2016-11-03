@@ -1,0 +1,43 @@
+@charset "uft-8";
+/*yangshi congzhi */
+body,ul,li,p,h1,h2,h3,h4,h5,h6,pre,form,fieldset,table,textarea,p,blockquote,td,img,div,dl,dt,dd,input{margin: 0;padding: 0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+img{border:none;}
+ol,li{list-style:none;}
+input,select,textarea{outline:none;border: none;background: none;}
+h1,h2,h3,h4,h5,h6{font-size: 1;font-weight: normal;}
+body{font:12px/1.5 '微软雅黑',tahoma,arial,'Hiragino Sans GB',宋体,sans-serif;}
+.clearfix:after{visibility: hidden;display: table;font-size: 0;content: "";clear: both;height: 0;}
+.clearfix{zoom:1;}
+.disabled{display: none;}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+}
+.content:{
+    width: 100%;
+    height: 100%;
+}
+/*stage*/
+.stage{
+    position: relative;
+    height: 680px;
+    width: 100%;
+}
+.stage .img-sec{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ddd;
+}
+.stage .controller-nav{
+    position: absolute;
+    left: 0;
+    bottom:  30px;
+    z-index:1;
+    width: 100%;
+    text-align: center;
+}
