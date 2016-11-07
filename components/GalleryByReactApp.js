@@ -55,10 +55,10 @@ var GalleryByReactApp = React.createClass({
 		halfStageW = Math.ceil(stageW/2),
 		halfStageH = Math.ceil(stageH/2);
 		//拿到一个imageFigure的大小
-		var  imgFigureDom = React.findDOMNode(this.refs.imgFigure0),
+		var imgFigureDom = React.findDOMNode(this.refs.imgFigure0),
 		imgW = imgFigureDom.scrollWidth,
 		imgH = imgFigureDom.scrollHeight,
-		halfImgW = Math.ceil(imgW  / 2),
+		halfImgW = Math.ceil(imgW / 2),
 		halfImgH = Math.ceil(imgH / 2);
 	},
 	render:function(){
