@@ -22,7 +22,29 @@ function getRangeRandom(low,high){
 function get30DegRandom(){
 	return Math.ceil(Math.random() > 0.5 ? ( Math.random() * 30 ) : - ( Math.random() * 30 )) ;
 }
-//图片的描述和图片
+
+//控制组件
+var ControllerUnit = React.createClass({
+	handleClick:function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		if(this.props.arrange.isCenter){
+			this.props.inverse();
+		}else{
+			this.props.center();
+		}
+	},
+	render:function(){
+		var imgIcon = "controller-unit";
+		imgIcon +=  this.props.arrange.isInverse ? ' inverse':'';
+		imgIcon +=  this.props.arrange.isCenter ? ' is-center':'';
+		return (
+			<span className={imgIcon} onClick={this.handleClick}>
+			</span>	
+			);
+	}
+});
+//图片的描述和图片 组件
 var ImageFigure = React.createClass({
 	/**
 	 * [点击图片效果]
@@ -224,9 +246,14 @@ var GalleryByReactApp = React.createClass({
  			}
  		}
  		//图片位置生成完了合并回来
- 		if(imgsArrangeTopArr && imgsArrangeTopArr[0]){
- 			imgsArrangeArr.splice(topImgSpliceIndex,0,imgsArrangeTopArr[0]);
+ 		if(imgsArrangeTopArr.length>0){
+			imgsArrangeTopArr.forEach(function(value,index){
+				if(imgsArrangeTopArr && imgsArrangeTopArr[index]){
+					imgsArrangeArr.splice(topImgSpliceIndex,0,imgsArrangeTopArr[index]);
+				}
+			});
  		}
+ 		
  		//把中心区域的图片合并到数组中
  		imgsArrangeArr.splice(centerIndex,0,imgsArrangeCenterArr[0]);
  		this.setState({
@@ -250,9 +277,10 @@ var GalleryByReactApp = React.createClass({
 			};
 			imgFigures.push(<ImageFigure info={value} key={index} ref={'imgFigure'+index} arrange={this.state.imgsArrangeArr[index]}
 							inverse={this.inverse(index)}	center={this.center(index)}	/>);
+			controllerUnits.push(<ControllerUnit key={index} center={this.center(index)} inverse={this.inverse(index)} arrange={this.state.imgsArrangeArr[index]}/>);
 		}.bind(this));
 		return (
-				<section className = "stage" ref="stage">
+				<section className="stage" ref="stage">
                 	<section className="img-sec">
 						{imgFigures}
                 	</section>
