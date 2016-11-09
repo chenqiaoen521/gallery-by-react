@@ -67,8 +67,8 @@ var ImageFigure = React.createClass({
 		}
 		//如果图片的旋转角度有值，且值不为零，添加旋转角度
 		if(this.props.arrange.rotate){
-			(['Moz','Ms','Webkit','']).forEach(function(value){
-				styleObj[value+'Transform'] = 'rotate('+this.props.arrange.rotate+'deg)';
+			(['MozTransform','MsTransform','WebkitTransform','transform']).forEach(function(value){
+				styleObj[value] = 'rotate('+this.props.arrange.rotate+'deg)';
 			}.bind(this));
 		}
 		if(this.props.arrange.isCenter){
