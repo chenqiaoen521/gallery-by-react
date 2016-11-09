@@ -1,11 +1,10 @@
  var config = {
    entry: './components/GalleryByReactApp.js',
-	
-   output: {
-      path:'./',
-      filename: 'main.js',
-   },
-	
+	 output: {
+    publicPath: 'assets/',
+    path: 'dist/assets/',
+    filename: 'main.js'
+  },
    devServer: {
       inline: true,
       port: 7777
