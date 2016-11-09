@@ -1,7 +1,7 @@
  var config = {
    entry: './components/GalleryByReactApp.js',
 	 output: {
-    publicPath: 'assets/',
+    publicPath: 'dist/assets/',
     path: 'dist/assets/',
     filename: 'main.js'
   },
